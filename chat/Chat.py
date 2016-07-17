@@ -1,5 +1,3 @@
-from __future__ import print_function
-
 import re
 import random
 
@@ -35,7 +33,7 @@ class Chat(object):
         return  re.compile(r"\b({0})\b".format("|".join(map(re.escape,
             sorted_refl))), re.IGNORECASE)
     def substitute(self, str):
-        return self._regex.sub(lambda mo:
+        return self.regex.sub(lambda mo:
                 self.reflections[mo.string[mo.start():mo.end()]],
                     str.lower())
     def wildcards(self, response, match):
