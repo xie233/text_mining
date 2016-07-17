@@ -1,5 +1,3 @@
-from __future__ import print_function
-from nltk.chat.util import reflections
 from Chat import Chat
 # a table of response pairs, where each pair consists of a
 # regular expression, and a list of possible responses,
